@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <title>14 Argumento ng Tanggol Wika</title>
+  </head>
+  <body>
+
+    <main>
+      <!-- Header -->
+      <h2>14 Argumento ng Tanggol Wika</h2>
+      <p>Wag kalimutan yung hyphens. Kung hindi nagrespond yung form, then mali yung sagot.</p>
+
+      <!-- Arguments Text Areas --> 
+      <form id="argumentsForm" onsubmit="event.preventDefault(); validateForm();">
+        <h3>Argument 1:</h3>
+        <textarea id="argument_1" name="argument_1" rows="4" cols="50"></textarea>
+        <br>
+        <button type="button" onclick="validateSingle(1)">submit 1</button>
+
+        <h3>Argument 2:</h3>
+        <textarea id="argument_2" name="argument_2" rows="4" cols="50"></textarea>
+        <br>
+        <button type="button" onclick="validateSingle(2)">submit 2</button>
+
+        <h3>Argument 3:</h3>
+        <textarea id="argument_3" name="argument_3" rows="4" cols="50"></textarea>
+        <br>
+        <button type="button" onclick="validateSingle(3)">submit 3</button>
+
+        <h3>Argument 4:</h3>
+        <textarea id="argument_4" name="argument_4" rows="4" cols="50"></textarea>
+        <br>
+        <button type="button" onclick="validateSingle(4)">submit 4</button>
+
+        <h3>Argument 5:</h3>
+        <textarea id="argument_5" name="argument_5" rows="4" cols="50"></textarea>
+        <br>
+        <button type="button" onclick="validateSingle(5)">submit 5</button>
+        
+        <h3>Argument 6:</h3>
+        <textarea id="argument_6" name="argument_6" rows="4" cols="50"></textarea>
+        <br>
+        <button type="button" onclick="validateSingle(6)">submit 6</button>
+
+        <h3>Argument 7:</h3>
+        <textarea id="argument_7" name="argument_7" rows="4" cols="50"></textarea>
+        <br>
+        <button type="button" onclick="validateSingle(7)">submit 7</button>
+
+        <h3>Argument 8:</h3>
+        <textarea id="argument_8" name="argument_8" rows="4" cols="50"></textarea>
+        <br>
+        <button type="button" onclick="validateSingle(8)">submit 8</button>
+
+        <h3>Argument 9:</h3>
+        <textarea id="argument_9" name="argument_9" rows="4" cols="50"></textarea>
+        <br>
+        <button type="button" onclick="validateSingle(9)">submit 9</button>
+
+        <h3>Argument 10:</h3>
+        <textarea id="argument_10" name="argument_10" rows="4" cols="50"></textarea>
+        <br>
+        <button type="button" onclick="validateSingle(10)">submit 10</button>
+
+        <h3>Argument 11:</h3>
+        <textarea id="argument_11" name="argument_11" rows="4" cols="50"></textarea>
+        <br>
+        <button type="button" onclick="validateSingle(11)">submit 11</button>
+
+        <h3>Argument 12:</h3>
+        <textarea id="argument_12" name="argument_12" rows="4" cols="50"></textarea>
+        <br>
+        <button type="button" onclick="validateSingle(12)">submit 12</button>
+
+        <h3>Argument 13:</h3>
+        <textarea id="argument_13" name="argument_13" rows="4" cols="50"></textarea>
+        <br>
+        <button type="button" onclick="validateSingle(13)">submit 13</button>
+
+        <h3>Argument 14:</h3>
+        <textarea id="argument_14" name="argument_14" rows="4" cols="50"></textarea>
+        <br>
+        <button type="button" onclick="validateSingle(14)">submit 14</button>
+
+        <br><br>
+        <button type="submit" id="submit_all">all or nothing bossing</button>
+      </form>
+    </main>
+
+    <script>
+      // Target reference solutions with normalized spaces
+      const solutions = {
+         1: "WALANG MAKABULUHANG ARGUMENTO ANG MGA ANTI-FILIPINO – ANG KAMPONG TANGGAL WIKA – SA PAGPAPATANGGAL NG FILIPINO AT PANITIKAN",
+        2: "DAPAT MAY FILIPINO AT PANITIKAN SA KOLEHIYO DAHIL ANG IBANG ASIGNATURA NA NASA JUNIOR AT/O SENIOR HIGHSCHOOL AY MAY KATUMBAS PA RIN SA KOLEHIYO",
+        3: "ANG FILIPINO AY DISIPLINA, ASIGNATURA, BUKOD NALARANGAN NG PAG-AARAL, AT HINDI SIMPLENG WIKANG PANTURO LAMANG",
+        4: "PARA MAGING EPEKTIBONG WIKANG PANTURO ANG FILIPINO, KAILANGANG ITURO AT LINANGIN DIN ITO BILANG ASIGNATURA",
+        5: "BAHAGI NG COLLEGE READINESS STANDARDS ANG FILIPINO AT PANITIKAN",
+        6: "SA IBANG BANSA, MAY ESPASYO RIN SA KURIKULUM ANG SARILING WIKA BILANG ASIGNATURA, BUKOD PA SA PAGIGING WIKANG PANTURO NITO",
+        7: "BINIGYAN NG DEPED AT CHED NG ESPASYO ANG MGA WIKANG DAYUHAN SA KURIKULUM, KAYA LALONG DAPAT NA MAY ESPASYO PARA SA WIKANG PAMBANSA",
+        8: "PINAG-AARALAN DIN SA IBANG BANSA ANG FILIPINO – AT MAY POTENSYAL ITONG MAGING ISANG NANGUNGUNANG WIKANG GLOBAL – KAYA LALONG DAPAT ITONG PAG-ARALAN SA PILIPINAS",
+        9: "MALAPIT ANG FILIPINO SA BAHASA MELAYU, BAHASA INDONESIA, AT BRUNEI MALAY, MGA WIKANG GINAGAMIT SA MALAYSIA, SINGAPORE, INDONESIA, AT BRUNEI, NA MGA BANSANG KASAPI NG ASEAN, KAYA’T MAHALAGANG WIKA ITO SA KONTEKSTO MISMO NG ASEAN INTEGRATION",
+        10: "MABABA PA RIN ANG AVERAGE SCORE NG MGA ESTUDYANTE SA FILIPINO SA NATIONAL ACHIEVEMENT TEST (NAT)",
+        11: "FILIPINO ANG WIKA NG MAYORYA, NG MIDYA, AT NG MGA KILUSANG PANLIPUNAN: ANG WIKA SA DEMOKRATIKO AT MAPAGPALAYANG DOMEYN NA MAHALAGA SA PAGBABAGONG PANLIPUNAN",
+        12: "MULTILINGGWALISMO ANG KASANAYANG AKMA SA SIGLO 21",
+        13: "HINDI PINAUNLAD, HINDI NAPAUNLAD AT HINDI MAPAPAUNLAD NG PAGSANDIG SA WIKANG DAYUHAN ANG EKONOMYA NG BANSA",
+        14: "MAY SAPAT NA MATERYAL AT NILALAMAN NA MAITUTURO SA FILIPINO AT PANITIKAN SA KOLEHIYO"
+      };
+
+      // Helper function to normalize spaces for comparison
+      function cleanText(text) {
+        return text.trim().replace(/\s+/g, ' ').toLowerCase();
+      }
+
+      // Check single field by index
+      function validateSingle(index) {
+        const userInput = document.getElementById(`argument_${index}`).value;
+        const cleanedInput = cleanText(userInput);
+        const cleanedTarget = cleanText(solutions[index]);
+
+        if (cleanedInput === cleanedTarget) {
+          alert(`nice`);
+          return true;
+        } else {
+          alert(`"${solutions[index]}"`);
+          return false;
+        }
+      }
+
+      // Check all fields on full form submit
+      function validateForm() {
+        let allCorrect = true;
+
+        for (let i = 1; i <= 14; i++) {
+          const userInput = document.getElementById(`argument_${i}`).value;
+          if (cleanText(userInput) !== cleanText(solutions[i])) {
+            alert(`may mali ka ata lmao`);
+            allCorrect = false;
+            break;
+          }
+        }
+
+        if (allCorrect) {
+          alert("nice one sheesh");
+        }
+      }
+    </script>
+  </body>
+</html>
